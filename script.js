@@ -9,15 +9,11 @@ function getLogo(user, name, stream, channel) {
   var getUserUrl = 'https://api.twitch.tv/kraken/users/' + user + '?callback=?'
   $.getJSON(getUserUrl, {})
     .done(function(json) {
-      console.log(name)
-      console.log(stream)
       if (json.logo === null) {
         logo = noLogo;
       } else {
       logo = json.logo;
       }
-      console.log(name)
-      console.log(stream)
       placeContent(logo, name, stream, channel);
     });
 }
@@ -51,8 +47,6 @@ function getContent(user) {
       } else {
         name = user;
       }
-      console.log(name)
-      console.log(stream)
       getLogo(user, name, stream, channel);
     });
 }
