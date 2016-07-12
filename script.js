@@ -7,6 +7,7 @@ var channel = "";
 
 function getLogo(user, name, stream, channel) {
   var getUserUrl = 'https://api.twitch.tv/kraken/users/' + user + '?callback=?'
+  channel = "https://www.twitch.tv/" + user;
   $.getJSON(getUserUrl, {})
     .done(function(json) {
       if (json.logo === null) {
@@ -30,7 +31,6 @@ function placeContent(logo, name, stream, channel) {
 
 function getContent(user) {
   var getStreamUrl = 'https://api.twitch.tv/kraken/streams/' + user + '?callback=?'
-  channel = "https://www.twitch.tv/" + user;
   $.getJSON(getStreamUrl, {})
     .done(function(data) {
       if (!(data.status === 422)) {
