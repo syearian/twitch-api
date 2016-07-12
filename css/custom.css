@@ -1,0 +1,21 @@
+body {
+  font-family: Lato, sans-serif;
+}
+
+header {
+  padding: 1em;
+  margin-bottom: 5px;
+  background-color: #512DA8;
+  color: #fff;
+  font-family: Oswald, sans-serif;
+}
+
+a.list-group-item {
+  margin-bottom: 5px;
+}
+
+a.list-group-item div.row {
+  display: flex;
+  justify-content: center; /* align horizontal */
+  align-items: center; /* align vertical */
+}
