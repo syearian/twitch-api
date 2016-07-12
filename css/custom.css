@@ -19,3 +19,8 @@ a.list-group-item div.row {
   justify-content: center; /* align horizontal */
   align-items: center; /* align vertical */
 }
+
+img {
+  max-height: 50px;
+  max-width: 50px;
+}
